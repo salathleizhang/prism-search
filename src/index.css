@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Source Han Sans SC";
+  src: url("./assets/fonts/ui/SourceHanSansSC/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans SC";
+  src: url("./assets/fonts/ui/SourceHanSansSC/OTF/SimplifiedChinese/SourceHanSansSC-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Han Sans SC";
+  src: url("./assets/fonts/ui/SourceHanSansSC/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Chill Huo Fang Song";
+  src: url("./assets/fonts/brand/ChillHuoFangSong-ConBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond Local";
+  src: url("./assets/fonts/brand/CormorantGaramond/cormorant-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond Local";
+  src: url("./assets/fonts/brand/CormorantGaramond/cormorant-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-ui: "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-brand-zh: "Chill Huo Fang Song", "STFangsong", serif;
+  --font-brand-en: "Cormorant Garamond Local", "Cormorant Garamond", Georgia, serif;
+}
+
+/* ============================================================
+   全局基础样式
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f7;
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.font-brand-zh {
+  font-family: var(--font-brand-zh);
+}
+
+.font-brand-en {
+  font-family: var(--font-brand-en);
+}
