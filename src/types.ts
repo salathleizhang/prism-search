@@ -13,8 +13,8 @@ export interface Category {
 }
 
 export const DEFAULT_THEME: Theme = { type: 'solid', color: '#f2f2f7', colorTo: '#c7d7f0' }
-export const THEME_KEY = 'easy-search-theme'
-export const CATEGORY_STORAGE_KEY = 'easy-search-categories'
+export const THEME_KEY = 'prism-search-theme'
+export const CATEGORY_STORAGE_KEY = 'prism-search-categories'
 export const UNCATEGORIZED_CATEGORY_ID = 'uncategorized'
 export const UNCATEGORIZED_CATEGORY: Category = { id: UNCATEGORIZED_CATEGORY_ID, name: '未分类' }
 
@@ -65,7 +65,7 @@ export const DEFAULT_SITES: Site[] = [
   { id: 'unity-assets', name: 'Unity',             label: 'Unity', domain: 'assetstore.unity.com', searchUrl: 'https://assetstore.unity.com/?q=',                 enabled: true },
 ]
 
-export const STORAGE_KEY = 'easy-search-sites'
+export const STORAGE_KEY = 'prism-search-sites'
 
 export function loadSites(): Site[] {
   try {

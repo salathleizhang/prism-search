@@ -1,6 +1,6 @@
 ﻿export type Locale = 'zh-CN' | 'en'
 
-export const LOCALE_STORAGE_KEY = 'easy-search-locale'
+export const LOCALE_STORAGE_KEY = 'prism-search-locale'
 
 export const locales: Locale[] = ['zh-CN', 'en']
 
@@ -25,8 +25,8 @@ export const siteLocaleMap: Record<string, { label: Record<Locale, string> }> = 
 
 export const messages = {
   'zh-CN': {
-    appTitle: '简单搜索',
-    appSubtitle: 'Easy Search',
+    appTitle: '棱镜搜索',
+    appSubtitle: 'Prism Search',
     footerHint: (name: string) => `点击图标直达 · Enter 使用 ${name}`,
     openTheme: '更换背景皮肤',
     manageSites: '管理搜索站点',
@@ -78,8 +78,8 @@ export const messages = {
     },
   },
   en: {
-    appTitle: 'Easy Search',
-    appSubtitle: 'Search faster',
+    appTitle: 'Prism Search',
+    appSubtitle: 'One query, every engine',
     footerHint: (name: string) => `Click an icon to search · Press Enter for ${name}`,
     openTheme: 'Change background theme',
     manageSites: 'Manage search sites',

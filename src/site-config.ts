@@ -13,8 +13,8 @@ export interface Site {
   categoryId: string
 }
 
-export const STORAGE_KEY = 'easy-search-sites'
-export const CATEGORY_STORAGE_KEY = 'easy-search-categories'
+export const STORAGE_KEY = 'prism-search-sites'
+export const CATEGORY_STORAGE_KEY = 'prism-search-categories'
 export const UNCATEGORIZED_CATEGORY_ID = 'uncategorized'
 
 export const UNCATEGORIZED_CATEGORY: Category = {
@@ -98,7 +98,7 @@ export function loadSites(): Site[] {
   return DEFAULT_SITES
 }
 
-export const DEFAULT_SEARCH_KEY = 'easy-search-default-site'
+export const DEFAULT_SEARCH_KEY = 'prism-search-default-site'
 
 export function loadDefaultSiteId(): string {
   return localStorage.getItem(DEFAULT_SEARCH_KEY) ?? 'google'

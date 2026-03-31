@@ -1,4 +1,4 @@
-# easy-search 架构文档
+# Prism Search 架构文档
 
 ## 项目结构
 
@@ -54,11 +54,11 @@ App.tsx（单一状态源）
 
 | 键 | 内容 |
 |----|------|
-| `easy-search-sites` | 用户站点列表 |
-| `easy-search-categories` | 用户分类列表 |
-| `easy-search-theme` | 背景主题 |
-| `easy-search-locale` | 界面语言 |
-| `easy-search-default-site` | 默认搜索引擎 id |
+| `prism-search-sites` | 用户站点列表 |
+| `prism-search-categories` | 用户分类列表 |
+| `prism-search-theme` | 背景主题 |
+| `prism-search-locale` | 界面语言 |
+| `prism-search-default-site` | 默认搜索引擎 id |
 
 ## 设计原则
 

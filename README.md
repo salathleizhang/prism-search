@@ -1,4 +1,4 @@
-# Easy Search
+# Prism Search
 
 A clean, elegant multi-engine search page with custom site management, categories, and theme switching.
 
