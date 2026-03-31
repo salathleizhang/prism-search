@@ -139,7 +139,7 @@ export function loadLocale(): Locale {
   } catch {
     /* ignore */
   }
-  return 'zh-CN'
+  return 'en'
 }
 
 export function getSiteLabel(siteId: string, locale: Locale, fallback: string) {

@@ -1,46 +1,48 @@
 # Easy Search
 
-一个简洁优雅的多引擎聚合搜索页，支持自定义站点、分类管理与主题切换。
+A clean, elegant multi-engine search page with custom site management, categories, and theme switching.
 
-## 功能特性
+[中文文档](./README_CN.md)
 
-- **多引擎搜索** — 内置 Google、GitHub、Bilibili、知乎、Perplexity、Claude 等 19 个常用站点，一键跳转
-- **自定义站点** — 添加任意搜索引擎，支持启用/禁用、拖拽排序
-- **分类管理** — 将站点分组整理，保持页面整洁
-- **默认搜索引擎** — 设置 Enter 键触发的默认引擎
-- **主题切换** — 纯色与渐变背景，多种预设色调
-- **中英双语** — 支持 zh-CN / en 语言切换
-- **本地持久化** — 所有配置存储在 localStorage，无需账号
+## Features
 
-## 技术栈
+- **Multi-engine search** — 19 built-in sites including Google, GitHub, Bilibili, Zhihu, Perplexity, Claude, and more
+- **Custom sites** — Add any search engine, enable/disable, drag to reorder
+- **Categories** — Group sites to keep the page organized
+- **Default engine** — Set which engine the Enter key triggers
+- **Theme switcher** — Solid colors and gradients with multiple presets
+- **Bilingual UI** — Supports zh-CN / en language toggle
+- **Local persistence** — All settings stored in localStorage, no account needed
+
+## Tech Stack
 
 - **React 18** + **TypeScript**
 - **Tailwind CSS** + **Framer Motion**
-- **HeroUI** 组件库
-- **Vite** 构建
+- **HeroUI** component library
+- **Vite** build tool
 
-## 快速开始
+## Getting Started
 
 ```bash
-# 安装依赖
+# Install dependencies
 npm install
 
-# 启动开发服务器
+# Start dev server
 npm run dev
 
-# 构建生产版本
+# Build for production
 npm run build
 ```
 
-## 添加自定义搜索引擎
+## Adding a Custom Search Engine
 
-搜索 URL 格式：`https://example.com/search?q=`（关键词会自动拼接在末尾）
+Search URL format: `https://example.com/search?q=` (the query is automatically appended at the end)
 
-## 字体许可
+## Font Licenses
 
-- **Source Han Sans SC（思源黑体）** — SIL Open Font License 1.1，© Adobe
-- **Cormorant Garamond** — SIL Open Font License 1.1，© Christian Thalmann
-- **ChillHuoFangSong（寒蝉火方宋）** — 请遵循字体原始授权协议
+- **Source Han Sans SC** — SIL Open Font License 1.1, © Adobe
+- **Cormorant Garamond** — SIL Open Font License 1.1, © Christian Thalmann
+- **ChillHuoFangSong** — Please refer to the font's original license terms
 
 ## License
 
