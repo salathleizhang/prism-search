@@ -82,7 +82,7 @@ export default function SearchBar({ locale, query, onChange, onKeyDown, onSearch
                 transition={{ duration: 0.15 }}
                 style={{
                   flexShrink: 0,
-                  background: '#007AFF',
+                  background: '#000000',
                   color: 'white',
                   fontSize: 11,
                   fontWeight: 700,

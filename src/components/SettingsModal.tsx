@@ -13,7 +13,7 @@ const INPUT_CLS = {
     'bg-[#f2f2f7]',
     'border border-[#e5e5ea]',
     'hover:border-[#c7c7cc]',
-    'focus-within:!border-[#007AFF]',
+    'focus-within:!border-black',
     'focus-within:bg-white',
     'rounded-[10px]',
     'transition-all duration-150',
@@ -27,7 +27,7 @@ const INPUT_CLS = {
 const selectClassName = [
   'h-8 min-w-[112px] px-2.5 rounded-[10px] text-[12px]',
   'bg-[#f2f2f7] border border-[#e5e5ea] text-[#3c3c43]',
-  'focus:outline-none focus:border-[#007AFF]',
+  'focus:outline-none focus:border-black',
 ].join(' ')
 
 interface SettingsModalProps {
@@ -191,7 +191,7 @@ const SettingsModal = React.memo(function SettingsModal({
                             className="group grid grid-cols-[20px_20px_minmax(0,1fr)_132px_36px_28px] items-center gap-3 px-4 py-2.5"
                             style={{
                               borderTop: idx > 0 ? '1px solid #f2f2f7' : 'none',
-                              background: dragOverIdx === idx ? '#f0f6ff' : 'white',
+                              background: dragOverIdx === idx ? '#f5f5f7' : 'white',
                               transition: 'background 0.1s',
                             }}
                           >
@@ -236,8 +236,8 @@ const SettingsModal = React.memo(function SettingsModal({
                               onClick={() => onToggle(site.id)}
                               className="flex-shrink-0 w-[22px] h-[22px] rounded-full flex items-center justify-center transition-all duration-150"
                               style={{
-                                background: site.enabled ? '#007AFF' : 'transparent',
-                                border: `1.5px solid ${site.enabled ? '#007AFF' : '#c7c7cc'}`,
+                                background: site.enabled ? '#000000' : 'transparent',
+                                border: `1.5px solid ${site.enabled ? '#000000' : '#c7c7cc'}`,
                                 color: 'white',
                               }}
                               title={site.enabled ? text.hide : text.show}
@@ -281,7 +281,7 @@ const SettingsModal = React.memo(function SettingsModal({
                     <button
                       onClick={handleAdd}
                       className="w-full h-9 rounded-[10px] text-[13px] font-semibold transition-all duration-150 active:scale-[0.98]"
-                      style={{ background: '#007AFF', color: 'white' }}
+                      style={{ background: '#000000', color: 'white' }}
                     >
                       {text.addSiteButton}
                     </button>
@@ -299,8 +299,8 @@ const SettingsModal = React.memo(function SettingsModal({
                           key={category.id}
                           className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-[12px] font-medium"
                           style={{
-                            background: category.id === UNCATEGORIZED_CATEGORY_ID ? '#f2f2f7' : '#eef6ff',
-                            color: category.id === UNCATEGORIZED_CATEGORY_ID ? '#636366' : '#007AFF',
+                            background: category.id === UNCATEGORIZED_CATEGORY_ID ? '#f2f2f7' : '#f5f5f7',
+                            color: category.id === UNCATEGORIZED_CATEGORY_ID ? '#636366' : '#1c1c1e',
                           }}
                         >
                           {category.name}
@@ -332,7 +332,7 @@ const SettingsModal = React.memo(function SettingsModal({
                       <button
                         onClick={handleAddCategory}
                         className="h-9 min-w-[120px] px-4 rounded-[10px] text-[13px] font-semibold whitespace-nowrap shrink-0 transition-all duration-150 active:scale-[0.98]"
-                        style={{ background: '#007AFF', color: 'white' }}
+                        style={{ background: '#000000', color: 'white' }}
                       >
                         {text.createCategory}
                       </button>

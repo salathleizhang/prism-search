@@ -72,7 +72,7 @@ const ThemeModal = React.memo(function ThemeModal({ locale, isOpen, onOpenChange
                     onClick={() => commit({ type })}
                     className="flex-1 py-2 text-[13px] font-medium transition-all duration-150"
                     style={{
-                      background: local.type === type ? '#007AFF' : 'transparent',
+                      background: local.type === type ? '#000000' : 'transparent',
                       color: local.type === type ? 'white' : '#3c3c43',
                     }}
                   >
@@ -93,8 +93,8 @@ const ThemeModal = React.memo(function ThemeModal({ locale, isOpen, onOpenChange
                         className="w-full aspect-square rounded-[10px] transition-all duration-150"
                         style={{
                           background: c,
-                          border: local.color === c ? '2.5px solid #007AFF' : '1.5px solid #e5e5ea',
-                          boxShadow: local.color === c ? '0 0 0 2px rgba(0,122,255,0.2)' : 'none',
+                          border: local.color === c ? '2.5px solid #000000' : '1.5px solid #e5e5ea',
+                          boxShadow: local.color === c ? '0 0 0 2px rgba(0,0,0,0.18)' : 'none',
                           transform: local.color === c ? 'scale(1.08)' : 'scale(1)',
                         }}
                       />
@@ -124,8 +124,8 @@ const ThemeModal = React.memo(function ThemeModal({ locale, isOpen, onOpenChange
                         className="w-full aspect-[2/1] rounded-[10px] transition-all duration-150"
                         style={{
                           background: `linear-gradient(to bottom, ${from}, ${to})`,
-                          border: local.color === from && local.colorTo === to ? '2.5px solid #007AFF' : '1.5px solid #e5e5ea',
-                          boxShadow: local.color === from && local.colorTo === to ? '0 0 0 2px rgba(0,122,255,0.2)' : 'none',
+                          border: local.color === from && local.colorTo === to ? '2.5px solid #000000' : '1.5px solid #e5e5ea',
+                          boxShadow: local.color === from && local.colorTo === to ? '0 0 0 2px rgba(0,0,0,0.18)' : 'none',
                           transform: local.color === from && local.colorTo === to ? 'scale(1.06)' : 'scale(1)',
                         }}
                       />
