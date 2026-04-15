@@ -78,11 +78,11 @@ export default function SiteGrid({ locale, sites, categories, query, onSearch }:
                     whileHover={{ scale: 1.04, y: -2 }}
                     whileTap={{ scale: 0.96 }}
                     onClick={() => onSearch(site)}
-                    className="w-[92px] h-[92px] flex flex-col items-center justify-center gap-1.5 py-3 px-2 rounded-[14px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF] focus-visible:ring-offset-2"
+                    className="w-[92px] h-[92px] flex flex-col items-center justify-center gap-1.5 py-3 px-2 rounded-[14px] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
                     style={{
-                      border: `1px solid ${isHovered ? '#007AFF' : '#e5e5ea'}`,
-                      boxShadow: isHovered ? '0 2px 12px rgba(0,122,255,0.12)' : '0 1px 3px rgba(0,0,0,0.04)',
-                      backgroundColor: isHovered ? '#f0f7ff' : 'white',
+                      border: `1px solid ${isHovered ? '#000000' : '#e5e5ea'}`,
+                      boxShadow: isHovered ? '0 12px 30px rgba(0,0,0,0.20)' : '0 8px 22px rgba(0,0,0,0.12)',
+                      backgroundColor: isHovered ? '#f5f5f7' : 'white',
                       opacity: isEmpty ? 0.5 : 1,
                       transition: 'border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease',
                     }}
@@ -96,7 +96,7 @@ export default function SiteGrid({ locale, sites, categories, query, onSearch }:
                     />
                     <span
                       className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-[11px] font-medium leading-[1.2] text-center"
-                      style={{ color: isHovered ? '#007AFF' : '#3c3c43' }}
+                      style={{ color: isHovered ? '#000000' : '#3c3c43' }}
                       title={site.name}
                     >
                       {site.name}

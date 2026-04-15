@@ -17,7 +17,7 @@ import {
   UNCATEGORIZED_CATEGORY_ID,
   loadDefaultSiteId,
 } from './site-config'
-import { IconGear, IconShirt, IconEye, IconEyeOff } from './icons'
+import { IconGear, IconShirt, IconEye, IconEyeOff, IconGitHub } from './icons'
 import { Locale, LOCALE_STORAGE_KEY, loadLocale, messages } from './i18n'
 import SearchBar from './components/SearchBar'
 import SiteGrid from './components/SiteGrid'
@@ -132,52 +132,68 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16">
-      <motion.div
+      <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="fixed top-4 right-4 z-20 flex items-center gap-1"
+        className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 py-4 pointer-events-none"
+        aria-label="Navigation"
       >
-        <motion.button
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.96 }}
-          onClick={toggleLocale}
-          className="h-9 min-w-[52px] px-3 rounded-xl text-[12px] font-semibold text-[#636366] hover:text-[#1c1c1e] hover:bg-[#e5e5ea] transition-colors duration-150"
-          aria-label={text.lang.switchTo}
-          title={text.lang.switchTo}
-        >
-          {text.lang.short}
-        </motion.button>
-        <motion.button
+        <motion.a
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setShowSites(prev => !prev)}
-          className="p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
-          aria-label={showSites ? '隐藏网站' : '显示网站'}
-          title={showSites ? '隐藏网站' : '显示网站'}
+          href="https://github.com/salathleizhang/prism-search"
+          target="_blank"
+          rel="noreferrer"
+          className="pointer-events-auto p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
+          aria-label="GitHub"
+          title="GitHub"
         >
-          {showSites ? <IconEye /> : <IconEyeOff />}
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsThemeOpen(true)}
-          className="p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
-          aria-label={text.openTheme}
-          title={text.openTheme}
-        >
-          <IconShirt />
-        </motion.button>
-        <motion.button
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsOpen(true)}
-          className="group p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
-          aria-label={text.manageSites}
-          title={text.manageSites}
-        >
-          <IconGear className="transition-transform duration-300 group-hover:rotate-45" />
-        </motion.button>
-      </motion.div>
+          <IconGitHub />
+        </motion.a>
+
+        <div className="pointer-events-auto flex items-center gap-1">
+          <motion.button
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+            onClick={toggleLocale}
+            className="h-9 min-w-[52px] px-3 rounded-xl text-[12px] font-semibold text-[#636366] hover:text-[#1c1c1e] hover:bg-[#e5e5ea] transition-colors duration-150"
+            aria-label={text.lang.switchTo}
+            title={text.lang.switchTo}
+          >
+            {text.lang.short}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setShowSites(prev => !prev)}
+            className="p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
+            aria-label={showSites ? '隐藏网站' : '显示网站'}
+            title={showSites ? '隐藏网站' : '显示网站'}
+          >
+            {showSites ? <IconEye /> : <IconEyeOff />}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setIsThemeOpen(true)}
+            className="p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
+            aria-label={text.openTheme}
+            title={text.openTheme}
+          >
+            <IconShirt />
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setIsOpen(true)}
+            className="group p-2 rounded-xl text-[#8e8e93] hover:text-[#3c3c43] hover:bg-[#e5e5ea] transition-colors duration-150"
+            aria-label={text.manageSites}
+            title={text.manageSites}
+          >
+            <IconGear className="transition-transform duration-300 group-hover:rotate-45" />
+          </motion.button>
+        </div>
+      </motion.nav>
 
       <div className="w-full max-w-5xl flex flex-col items-center">
         <motion.div

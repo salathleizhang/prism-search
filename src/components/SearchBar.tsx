@@ -34,16 +34,16 @@ export default function SearchBar({ locale, query, onChange, onKeyDown, onSearch
             background: 'white',
             border: '1.5px solid #e5e5ea',
             borderRadius: 14,
-            boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
+            boxShadow: '0 8px 22px rgba(0,0,0,0.12)',
           }}
           onFocus={e => {
-            e.currentTarget.style.borderColor = '#007AFF'
-            e.currentTarget.style.boxShadow = '0 0 0 3px rgba(0,122,255,0.12)'
+            e.currentTarget.style.borderColor = '#000000'
+            e.currentTarget.style.boxShadow = '0 0 0 3px rgba(0,0,0,0.12), 0 10px 26px rgba(0,0,0,0.16)'
           }}
           onBlur={e => {
             if (e.currentTarget.contains(e.relatedTarget as Node)) return
             e.currentTarget.style.borderColor = '#e5e5ea'
-            e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)'
+            e.currentTarget.style.boxShadow = '0 8px 22px rgba(0,0,0,0.12)'
           }}
           onMouseEnter={e => {
             if (!e.currentTarget.matches(':focus-within')) e.currentTarget.style.borderColor = '#c7c7cc'
@@ -68,7 +68,7 @@ export default function SearchBar({ locale, query, onChange, onKeyDown, onSearch
               outline: 'none',
               fontSize: 15,
               color: '#1c1c1e',
-              caretColor: '#007AFF',
+              caretColor: '#000000',
             }}
             className="placeholder:text-[#aeaeb2]"
           />
@@ -128,13 +128,13 @@ export default function SearchBar({ locale, query, onChange, onKeyDown, onSearch
             width: 54,
             height: 54,
             flexShrink: 0,
-            background: '#007AFF',
-            border: '1.5px solid #007AFF',
-            boxShadow: '0 1px 4px rgba(0,122,255,0.25)',
+            background: '#000000',
+            border: '1.5px solid #000000',
+            boxShadow: '0 8px 22px rgba(0,0,0,0.24)',
             color: 'white',
           }}
-          onMouseEnter={e => { e.currentTarget.style.background = '#0066dd'; e.currentTarget.style.borderColor = '#0066dd' }}
-          onMouseLeave={e => { e.currentTarget.style.background = '#007AFF'; e.currentTarget.style.borderColor = '#007AFF' }}
+          onMouseEnter={e => { e.currentTarget.style.background = '#1c1c1e'; e.currentTarget.style.borderColor = '#1c1c1e' }}
+          onMouseLeave={e => { e.currentTarget.style.background = '#000000'; e.currentTarget.style.borderColor = '#000000' }}
           aria-label={locale === 'zh-CN' ? '搜索' : 'Search'}
           title={locale === 'zh-CN' ? '搜索' : 'Search'}
         >
